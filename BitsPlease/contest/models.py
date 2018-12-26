@@ -67,3 +67,14 @@ class Question(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Event(models.Model):
+    name = models.TextField(max_length=200)
+    description = models.TextField()
+    date_time = models.DateTimeField(auto_now_add=False)
+    speaker = models.TextField()
+    registration_link = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name

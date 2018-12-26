@@ -1,8 +1,13 @@
 from django.views.generic import ListView, DetailView, View, TemplateView
-from .models import Question, Contest, Tag, Notice
+from .models import Question, Contest, Tag, Notice, Event
 from django.http import Http404
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.db.models import Q
+
+
+def events(request):
+    event_list = Event.objects.all()
+    return render(request, 'events.html',{'Events':event_list})
 
 
 class NoticeListView(ListView):

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Question, Contest, Tag, Notice
+from .models import Question, Contest, Tag, Notice, Event
 
 
 class NoticeAdmin(admin.ModelAdmin):
@@ -22,3 +22,4 @@ admin.site.register(Question, QuestionAdmin)
 admin.site.register(Notice, NoticeAdmin)
 admin.site.register(Contest, ContestAdmin)
 admin.site.register(Tag, TagAdmin)
+admin.site.register(Event)
