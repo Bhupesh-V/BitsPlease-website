@@ -74,6 +74,7 @@ class Event(models.Model):
     description = models.TextField()
     date_time = models.DateTimeField(auto_now_add=False)
     speaker = models.TextField()
+    venue = models.TextField(max_length=200, null=True)
     registration_link = models.CharField(max_length=300)
 
     def __str__(self):
